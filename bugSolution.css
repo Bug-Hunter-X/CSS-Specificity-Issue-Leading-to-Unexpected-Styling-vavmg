@@ -1,0 +1,28 @@
+The solution lies in understanding CSS specificity and adjusting the rules accordingly.  Here are a few approaches to fix the issue:
+
+1. **Increase Specificity of the intended rule:** If you want the `<p>` elements to be red even when nested in a `<div>`, increase the specificity of the `p { color: red; }` rule. This can be done by adding an ID or a more specific class.
+
+2. **Use !important (Avoid if possible):** As a last resort and generally discouraged, you can use the `!important` flag. However, overuse of `!important` can make your CSS harder to maintain.
+
+3. **Order of rules:** Consider carefully how CSS specificity works and rearrange the order of the rules to ensure the desired style takes precedence.
+
+Here's a possible solution using the first approach:
+
+```css
+/* bugSolution.css */
+div p {
+  color: blue;
+}
+
+.red-paragraph {
+  color: red;
+}
+p {
+  color: green;
+}
+div {
+  color: green;
+}
+```
+
+Now, by applying the class `red-paragraph` to the `<p>` element, the rule targeting that specific class will override other rules making the text red.
