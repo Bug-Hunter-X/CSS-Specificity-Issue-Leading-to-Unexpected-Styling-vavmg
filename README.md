@@ -1,0 +1,2 @@
+# CSS Specificity Issue
+This repository demonstrates a common CSS issue related to specificity conflicts.  The `bug.css` file contains CSS rules that lead to unexpected styling due to the order of rules and specificity. The `bugSolution.css` shows how to resolve this issue by understanding and managing CSS specificity.  See the bug report for more details.
