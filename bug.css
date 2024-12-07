@@ -1,0 +1,15 @@
+The following CSS code snippet demonstrates a common issue where specificity conflicts lead to unexpected styling behavior.  The nested `div` and `p` elements receive different styling depending on the order of the CSS rules. This is a classic example of specificity overriding intended styles. 
+
+```css
+div p {
+  color: blue; /* This rule is more specific */
+}
+
+p {
+  color: red; /* This rule is less specific */
+}
+div {
+  color: green; /* This rule is less specific */
+}
+```
+In this example, the `<p>` element nested within a `<div>` will have blue text. The rule with the higher specificity, `div p`, overrides the less specific rules targeting `p` and `div` individually.
